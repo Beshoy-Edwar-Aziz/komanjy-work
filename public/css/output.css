@@ -274,6 +274,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -433,6 +436,9 @@
     }
   }
   @media (width >= 48rem) {
+    .md\:block {
+      display: block;
+    }
     .md\:flex {
       display: flex;
     }
@@ -450,6 +456,9 @@
     }
     .md\:justify-between {
       justify-content: space-between;
+    }
+    .md\:gap-0 {
+      gap: 0px;
     }
     .md\:text-6xl {
       font-size: var(--text-6xl);
