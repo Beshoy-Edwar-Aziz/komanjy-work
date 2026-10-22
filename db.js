@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 let cached = global.mongoose || (global.mongoose = { conn: null, promise: null });
-
+const MONGODB_URI =
+  "mongodb+srv://beshoyedwar8_db_user:zIgQRBRjcvKfunqA@cluster0.okugu5m.mongodb.net/?appName=Cluster0";
 async function connectDB() {
   if (cached.conn) return cached.conn;
   if (!cached.promise) {

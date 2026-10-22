@@ -113,6 +113,7 @@ if (process.env.NODE_ENV !== 'production') {
   })
   .catch((err) => console.log(err));
 }
+module.exports = app;
 // mongoose
 //   .connect(MONGODB_URI, { dbName: "komanjy" })
 //   .then(() => {
