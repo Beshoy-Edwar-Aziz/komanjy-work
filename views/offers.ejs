@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offers</title>
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/head.css" />
+  </head>
+  <body>
+    <header class="h-dvh relative">
+      <div class="bg-black/50 absolute top-0 left-0 h-full w-full">
+        <h1 class="text-white text-5xl ps-3 pt-3"><a href="/">Komanjy</a></h1>
+        <div
+          class="hero-section flex flex-col gap-y-7 justify-center items-center flex-wrap h-full"
+        >
+          <h2
+            class="font-extrabold text-center text-white text-4xl md:text-6xl"
+          >
+            Our Offers
+          </h2>
+        </div>
+      </div>
+    </header>
+    <main class="p-2 roboto">
+      <div class="flex flex-col items-center gap-5 my-10">
+        <h2 class="text-[#e1dcdc] font-bold text-5xl relative tailor-head">Tailor Your Future %</h2>
+        <article class="card w-1/2 bg-[#e1dcdc] rounded border-2 border-black">
+          <div class="card-head text-center border-b-2">
+            <h3 class="font-bold text-4xl p-3">Reels Creation</h3>
+          </div>
+
+          <div
+            class="card-footer border-t-2 flex justify-around items-center"
+            id="reels-creation"
+          >
+            <h3 class="font-bold text-xl p-3">Total Price = EGP4999</h3>
+            <input type="hidden" name="totalMoney" value="4999" />
+            <button
+              type="submit"
+              class="add-btn border-2 border-black bg-black text-xl text-center rounded-full w-10 h-10 flex justify-center items-center text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              +
+            </button>
+            <button
+              type="submit"
+              class="deduce-btn border-2 border-black bg-black text-xl text-center rounded-full w-10 h-10 flex justify-center items-center text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              -
+            </button>
+          </div>
+        </article>
+        <article class="card w-1/2 bg-[#e1dcdc] rounded border-2 border-black">
+          <div class="card-head text-center border-b-2">
+            <h3 class="font-bold text-4xl p-3">Social Media Marketing</h3>
+          </div>
+
+          <div
+            class="card-footer border-t-2 flex justify-around items-center"
+            id="social-media"
+          >
+            <h3 class="font-bold text-xl p-3">Total Price = EGP5997</h3>
+
+            <input type="hidden" name="totalMoney" value="5997" />
+            <button
+              type="submit"
+              class="add-btn bg-black border-2 border-black text-xl text-center rounded-full w-10 h-10 flex justify-center items-center text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              +
+            </button>
+            <button
+              type="submit"
+              class="deduce-btn bg-black border-2 text-xl text-center rounded-full w-10 h-10 flex justify-center items-center border-black text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              -
+            </button>
+          </div>
+        </article>
+        <article class="card w-1/2 bg-[#e1dcdc] rounded border-2 border-black">
+          <div class="card-head text-center border-b-2">
+            <h3 class="font-bold text-4xl p-3">Content Creation</h3>
+          </div>
+
+          <div
+            class="card-footer border-t-2 flex justify-around items-center"
+            id="content-creation"
+          >
+            <h3 class="font-bold text-xl p-3">Total Price = EGP6000</h3>
+
+            <input type="hidden" name="totalMoney" value="5997" />
+            <button
+              type="submit"
+              class="add-btn bg-black border-2 border-black text-xl text-center rounded-full w-10 h-10 flex justify-center items-center text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              +
+            </button>
+            <button
+              type="submit"
+              class="deduce-btn bg-black border-2 text-xl text-center rounded-full w-10 h-10 flex justify-center items-center border-black text-white p-2 my-2 transition-all hover:bg-[#e1dcdc] hover:text-black hover:cursor-pointer hover:border-black"
+            >
+              -
+            </button>
+          </div>
+        </article>
+      </div>
+      <div class="flex justify-between bg-black/50 p-10 mt-5">
+        <div class="w-[30%] mt-30"><p class="text-6xl font-bold text-[#f6f1f1]">Your Monthly Choices Are</p></div>
+        <div class="reciept mt-30 w-[45%]">
+          <div class="receipt__main bg-[#e1dcdc] text-center">
+            <div class="receipt__head border-b-2 py-3">
+              <h2 class="font-bold text-3xl">Receipt</h2>
+            </div>
+            <div class="receipt__body ps-3 pt-2 border-b-2 text-xl">
+               <div class="flex justify-between">
+                <div class="flex gap-x-2">
+                  <p>Reels Creation x</p>
+                  <span class="reels-creation">qty: <%=total.reelsCreation.qty%></span>
+                </div>
+                <span class="pe-2 reels-creation-price">EGP<%=total.reelsCreation.qty * total.reelsCreation.price%></span>
+              </div>
+              <div class="flex justify-between">
+                <div class="flex gap-x-2">
+                  <p>Social Media Marketing x</p>
+                  <span class="social-media">qty: <%=total.socialMediaMarketing.qty%></span>
+                </div>
+                <span class="pe-2 social-media-price">EGP<%=total.socialMediaMarketing.qty * total.socialMediaMarketing.price%></span>
+              </div>
+               <div class="flex justify-between">
+                <div class="flex gap-x-2">
+                  <p>Content Creation x</p>
+                  <span class="content-creation">qty: <%=total.contentCreation.qty%></span>
+                </div>
+                <span class="pe-2 content-creation-price">EGP<%=total.contentCreation.qty * total.contentCreation.price%></span>
+              </div>
+            </div>
+            <div class="receipt__footer">
+              <span class="font-bold text-2xl total-price">Total Price= EGP<%=total.totalPrice%></span>
+            </div>
+          </div>
+        </div>
+      </div>
+        <footer class="bg-black flex justify-center items-center p-10">
+      <p class="text-white">All Rights Reserved For Komanjy @2026</p>
+    </footer>
+    </main>
+    <nav class="bg-[#e1dcdc] text-black fixed bottom-1/2 rounded p-5">
+      <h2 class="font-bold text-2xl">Your Plan</h2>
+      <div class="contain">
+        <h2>Monthly Total: EGP<%=total.totalPrice%></h2>
+      </div>
+    </nav>
+  
+    <script src="/js/main.js"></script>
+  </body>
+</html>
