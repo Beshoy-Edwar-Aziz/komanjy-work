@@ -454,6 +454,9 @@
     .md\:flex {
       display: flex;
     }
+    .md\:w-1\/2 {
+      width: calc(1 / 2 * 100%);
+    }
     .md\:w-\[45\%\] {
       width: 45%;
     }
