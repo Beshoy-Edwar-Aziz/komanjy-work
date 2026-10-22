@@ -9,7 +9,7 @@ const app = express();
 const MONGODB_URI =
   "mongodb+srv://beshoyedwar8_db_user:zIgQRBRjcvKfunqA@cluster0.okugu5m.mongodb.net/?appName=Cluster0";
 app.set("view engine", "ejs");
-app.set("views", "views");
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
