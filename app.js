@@ -6,8 +6,7 @@ const mongoose = require("mongoose");
 const TotalOrder = require("./models/total-order");
 const db = require('./db');
 const app = express();
-const MONGODB_URI =
-  "mongodb+srv://beshoyedwar8_db_user:zIgQRBRjcvKfunqA@cluster0.okugu5m.mongodb.net/?appName=Cluster0";
+
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
